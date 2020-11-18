@@ -1,0 +1,70 @@
+== About `/bin/sh`
+
+What is sh
+
+sh (or the Shell Command Language) is a programming language described by the http://pubs.opengroup.org/onlinepubs/009695399/utilities/xcu_chap02.html[POSIX standard]. It has many implementations (ksh88, dash, ...). bash can also be considered an implementation of sh (see below).
+
+Because sh is a specification, not an implementation, /bin/sh is a symlink (or a hard link) to an actual implementation on most POSIX systems.
+
+See https://stackoverflow.com/questions/5725296/difference-between-sh-and-bash
+
+
+== MacOSX
+
+Both `/bin/sh` and `/bin/bash` are same on MacOSX.
+
+----
+ZEMIANs-iMac:shell-starter zemian$ uname -a
+Darwin ZEMIANs-iMac.local 17.7.0 Darwin Kernel Version 17.7.0: Thu Dec 20 21:47:19 PST 2018; root:xnu-4570.71.22~1/RELEASE_X86_64 x86_64
+ZEMIANs-iMac:bash-starter zemian$ which sh
+/bin/sh
+ZEMIANs-iMac:bash-starter zemian$ which bash
+/bin/bash
+ZEMIANs-iMac:bash-starter zemian$ /bin/sh --version
+GNU bash, version 3.2.57(1)-release (x86_64-apple-darwin17)
+Copyright (C) 2007 Free Software Foundation, Inc.
+ZEMIANs-iMac:bash-starter zemian$ /bin/bash --version
+GNU bash, version 3.2.57(1)-release (x86_64-apple-darwin17)
+Copyright (C) 2007 Free Software Foundation, Inc.
+----
+
+== Ubuntu
+
+The `/bin/sh` is linked to `dash` instead of `bash`.
+
+https://wiki.ubuntu.com/DashAsBinSh
+
+In Ubuntu 6.10, the default system shell, /bin/sh, was changed to dash (the Debian Almquist Shell); previously it had been bash (the GNU Bourne-Again Shell). The same change will affect users of Ubuntu 6.06 LTS upgrading directly to Ubuntu 8.04 LTS. This document explains this change and what you should do if you encounter problems.
+
+The default login shell remains bash. Opening a terminal from the menu or shortcut [crtl-alt-t] provides interactive bash. A script run from the desktop or file manager, through the dialogue 'run in terminal' will execute as POSIX dash. 
+
+== What is `dash` (the Debian Almquist Shell)
+
+dash is the standard command interpreter for the Linux system. The current version of dash is in the process of being changed to conform with the POSIX 1003.2 and 1003.2a specifications for the shell. This version has many features which make it appear similar in some respects to the Korn shell, but it is not a Korn shell clone. Only features designated by POSIX, plus a few Berkeley extensions, are being incorporated into this shell.
+
+https://wiki.archlinux.org/index.php/Dash
+
+DASH (Debian Almquist shell) is a modern POSIX-compliant implementation of `/bin/sh` (sh, Bourne shell).
+
+DASH is not Bash compatible, but Bash tries to be mostly compatible with POSIX, and thus Dash.
+
+DASH shines in:
+
+    - Speed of execution. Roughly 4x times faster than Bash and others.
+    - Very limited resources (disk space, RAM or CPU). As minimalistic as possible - much smaller (134.1 kB vs 6.5 MB installed, 13 kSLOC vs 176 kSLOC) than Bash and others.
+    - Security. Dash is a long-established, tiny project with simple and long-established functionality; one that is still very much alive, and with many active developers. Thus, Dash has a much smaller attack surface, while still having many eyes on its code.
+    - If classic /bin/sh needed only.
+
+== Windows
+
+Windows use DOS/Batch script or PowerShell as shell scripting.
+
+- https://www.tutorialspoint.com/batch_script/
+- https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands
+- https://docs.microsoft.com/en-us/powershell/scripting/getting-started/getting-started-with-windows-powershell?view=powershell-6
+
+=== Bash For Windows
+
+You can also get `bash` for Windows using http://cygwin.org/[Cygwin] or http://www.mingw.org/wiki/MSYS[MinGW].
+
+Or using https://git-scm.com/download/win[Git for Windows] will include MinGW and `bash` shell.
