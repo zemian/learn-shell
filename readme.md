@@ -8,6 +8,8 @@ Bash Programming: https://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO.html
 
 ## Learning Path
 
+1. hello.sh
+1. shebang.sh
 1. vars.sh
 1. strings.sh
 1. controlsstatements.sh
