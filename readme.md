@@ -12,7 +12,7 @@ Bash Programming: https://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO.html
 1. shebang.sh
 1. vars.sh
 1. strings.sh
-1. controlsstatements.sh
+1. control-statements.sh
 1. functions.sh
 1. grouping-commands.sh
 
