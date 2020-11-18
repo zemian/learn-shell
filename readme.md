@@ -6,6 +6,14 @@ Bash Manual: https://www.gnu.org/software/bash/manual/html_node/index.html
 
 Bash Programming: https://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO.html
 
+## Learning Path
+
+1. vars.sh
+1. strings.sh
+1. controlsstatements.sh
+1. functions.sh
+1. grouping-commands.sh
+
 ## How to change shell in MacOS
 
 https://itnext.io/upgrading-bash-on-macos-7138bd1066ba
