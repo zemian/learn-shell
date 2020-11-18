@@ -2,6 +2,10 @@
 
 Learn how Unix/Linux shell works. Will mainly focus on `bash` shell.
 
+Bash Manual: https://www.gnu.org/software/bash/manual/html_node/index.html
+
+Bash Programming: https://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO.html
+
 ## How to change shell in MacOS
 
 https://itnext.io/upgrading-bash-on-macos-7138bd1066ba
